@@ -1,0 +1,23 @@
+{% extends "PropHound_base.html" %}
+
+{% block title %}Property Hound{% endblock %}
+{% block content %}
+    <h3>Welcome to Property Hound</h3>
+    <hr>
+    {# Header and button to take user to page of current listings #}
+    <div class="text-center">
+        <h5>Your Current Listings</h5>
+        <form method="POST">
+            <button type="submit"><a href="{% url 'prophound_read' %}">Listings</a></button>
+        </form>
+    </div>
+    <hr>
+    {# Will take user to page to create a new listing #}
+    <div class="text-center">
+        <h5>Add Another Listing</h5>
+        <button type="submit"><a href="{% url 'prophound_create' %}">Create Listing</a></button>
+    </div>
+
+
+
+{% endblock %}

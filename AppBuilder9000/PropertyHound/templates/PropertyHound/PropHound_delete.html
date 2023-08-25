@@ -1,0 +1,16 @@
+{% extends "PropHound_base.html" %}
+
+{% block title %}Delete{% endblock %}
+{% block content %}
+
+<div class="text-center">
+    <form method="POST">
+            {% csrf_token %}
+            <h3>Permanently delete listing: "{{ property.street_add }}"?</h3>
+            <br>
+            <button type="submit">Delete</button>
+        </form>
+    <button type="submit"><a href="{% url 'prophound_details' property.id %}">Return</a></button>
+</div>
+
+{% endblock %}

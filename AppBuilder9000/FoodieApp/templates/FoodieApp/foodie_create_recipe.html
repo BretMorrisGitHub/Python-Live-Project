@@ -1,0 +1,19 @@
+{% extends "foodie_base.html" %}
+
+{% block title %}FoodieApp Create Recipes{% endblock %}
+
+{% block header %} Create a FoodieApp Recipe {% endblock%}
+{% block content %}
+<div class="create_recipe">
+    <form action="{% url 'foodie_create_recipe' %}" method="POST">
+        <h2>Create a New Recipe</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+{% endblock %}
+

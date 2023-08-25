@@ -1,0 +1,20 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Add a Location{% endblock %}
+
+{% block header %}Add a Location!{% endblock %}
+
+{% block content %}
+<p>Are we missing your favorite vacation spot? Add it to our database to help us spread the word!</p>
+<br>
+<div class="dt-add_location-form">
+				<form method="POST"> <!-- Replace this with the Django Form -->
+					{% csrf_token %}
+					{{form.as_p}}
+					<button id="dt-add_location-submit" type="submit" name="Add Location">Add Location</button>
+				</form>
+				<br>
+			</div>
+
+
+{% endblock %}

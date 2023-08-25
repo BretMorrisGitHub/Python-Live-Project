@@ -1,0 +1,14 @@
+{% extends "collectibles_base.html" %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'static/CSS/collectibles.css' %}">
+
+{% block title %}Card Details{% endblock %}
+{% block content %}
+<h1>Details</h1>
+<h3>{{ item.name }} - {{ item.year }}</h3>
+<p>{{ item.description }}</p>
+<button><a href="{% url 'collectibles_display' %}">Update Entry</a></button>
+<button><a href="{% url 'collectibles_update' item.id %}" class="btn">Edit</a></button>
+<button><a href="{% url 'collectibles_delete' item.id %}" class="btn">Delete</a></button>
+{% endblock %}

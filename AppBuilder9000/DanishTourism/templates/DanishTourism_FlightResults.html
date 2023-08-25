@@ -1,0 +1,49 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Flight Search Results{% endblock %}
+
+{% block header %}Flight Search Results{% endblock %}
+{% block content %}
+<!-- Neatly displays relevant information from API JSON results -->
+<div class="dt-planTrip-api">
+    <p>
+        <span class="dt-planTrip-airline">Airline: {{results.result1.airline }}</span><br>
+        <span class="dt-planTrip-departure">Departure: {{ results.result1.departure }}</span><br>
+        <span class="dt-planTrip-arrival">Arrival: {{ results.result1.arrival}}</span><br>
+        <span class="dt-planTrip-price">Price: {{ results.result1.price }}</span><br>
+    </p>
+    <br>
+    <br>
+    <p>
+        <span class="dt-planTrip-airline">Airline: {{results.result2.airline }}</span><br>
+        <span class="dt-planTrip-departure">Departure: {{ results.result2.departure }}</span><br>
+        <span class="dt-planTrip-arrival">Arrival: {{ results.result2.arrival}}</span><br>
+        <span class="dt-planTrip-price">Price: {{ results.result2.price }}</span><br>
+    </p>
+    <br>
+    <br>
+    <p>
+        <span class="dt-planTrip-airline">Airline: {{results.result3.airline }}</span><br>
+        <span class="dt-planTrip-departure">Departure: {{ results.result3.departure }}</span><br>
+        <span class="dt-planTrip-arrival">Arrival: {{ results.result3.arrival}}</span><br>
+        <span class="dt-planTrip-price">Price: {{ results.result3.price }}</span><br>
+    </p>
+    <br>
+    <br>
+    <p>
+        <span class="dt-planTrip-airline">Airline: {{results.result4.airline }}</span><br>
+        <span class="dt-planTrip-departure">Departure: {{ results.result4.departure }}</span><br>
+        <span class="dt-planTrip-arrival">Arrival: {{ results.result4.arrival}}</span><br>
+        <span class="dt-planTrip-price">Price: {{ results.result4.price }}</span><br>
+    </p>
+    <br>
+    <br>
+    <p>
+        <span class="dt-planTrip-airline">Airline: {{results.result5.airline }}</span><br>
+        <span class="dt-planTrip-departure">Departure: {{ results.result5.departure }}</span><br>
+        <span class="dt-planTrip-arrival">Arrival: {{ results.result5.arrival}}</span><br>
+        <span class="dt-planTrip-price">Price: {{ results.result5.price }}</span><br>
+    </p>
+</div>
+
+{% endblock %}

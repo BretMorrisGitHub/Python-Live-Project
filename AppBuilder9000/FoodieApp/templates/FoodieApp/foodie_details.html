@@ -1,0 +1,20 @@
+{% extends "foodie_base.html" %}
+
+{% block title %} FoodieApp{% endblock %}
+
+{% block header %} How to Make: {{ recipe.recipe_name }} {% endblock%}
+
+{% block content %}
+
+<div class="details">
+    <p>Created By: {{ recipe.created_by }}</p>
+    <h3>Ingredients:</h3>
+        <p>{{ recipe.ingredients }}</p>
+    <h3>Directions:</h3>
+        <p>{{ recipe.directions }}</p>
+    <button><a href="{% url 'foodie_edit' recipe.id %}">Edit Recipe</a> </button>
+    <button><a href="{% url 'foodie_delete' recipe.id %}">Delete Recipe</a> </button>
+</div>
+
+{% endblock %}
+

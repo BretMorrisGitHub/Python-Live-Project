@@ -1,0 +1,55 @@
+body {
+    background: url("../images/wavy.jpg")
+}
+
+.navbar {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #f3f1f1;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666766;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h3 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+
+}
+
+.table {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+}
+
+th {
+    padding-bottom: 20px;
+}

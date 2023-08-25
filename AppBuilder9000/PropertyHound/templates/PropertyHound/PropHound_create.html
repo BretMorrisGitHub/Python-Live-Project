@@ -1,0 +1,13 @@
+{% extends "PropHound_base.html" %}
+{% block title %}Add New Listing{% endblock %}
+{% block content %}
+    <h3>Add New Listing</h3>
+    <div class="text-center">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button id="new-property-button" type="submit" name="Save_Property">Add Listing</button>
+        </form>
+        <br>
+    </div>
+{% endblock %}

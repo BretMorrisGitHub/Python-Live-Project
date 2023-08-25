@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel= "stylesheet" type="text/css" href="{% static 'CSS/collectibles.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Create New Collectible Card Registry{% endblock %}</title>
+    </head>
+    <header>
+        <div class="navbar">
+		    <a href="{% url 'collectibles_home'%}" class="nav-link">Home</a>
+            <a href="{% url 'collectibles_create' %}" class="nav-link">Create New Submission</a>
+            <a href="{% url 'collectibles_display' %}" class="nav-link">Cards List</a>
+            <a href="{% url 'collectibles_bsoup' %}" class="nav-link">Beautiful Soup</a>
+            <a href="{% url 'collectibles_api' %}" class="nav-link">API</a>
+        </div>
+    </header>
+
+    <body id="body">
+    {% load crispy_forms_tags %}
+        <div class="">
+            {% block content %}{% endblock %}
+        </div>
+
+        <section id="block-footer">
+			<p id="footer-right"><a href="#">Terms</a>|<a href="#">Privacy</a></p>
+			<p id="footer-left">&copy;2023 - Collectibles Report</p>
+		</section>
+    </body>
+
+
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</html>

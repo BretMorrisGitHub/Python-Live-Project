@@ -1,0 +1,27 @@
+{% extends "collectibles_base.html" %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'static/CSS/collectibles.css' %}">
+
+
+{% block title %}Personal Database{% endblock %}
+
+{% block content %}
+
+    <h2>Collectible Card Collection</h2>
+    <table>
+        <tr>
+            <th>Title</a></th>
+            <th>Creation Date</a></th>
+        </tr>
+        {% for card in cards %}
+        <tr>
+            <td><a href="{% url 'collectibles_details' card.id %}">{{ card.name }}</a></td>
+            <td>{{ card.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'collectibles_create' %}">Add Entry</a>
+
+
+{% endblock %}

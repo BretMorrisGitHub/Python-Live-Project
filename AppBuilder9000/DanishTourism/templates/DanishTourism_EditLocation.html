@@ -1,0 +1,27 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Edit Location{% endblock %}
+
+{% block header %}Edit A Location{% endblock %}
+
+{% block content %}
+<div class="dt-edit_delete-form">
+    <form name="detailsForm" method="POST" action="">
+        <div class="dt-edit_delete-formObject">
+            {% csrf_token %}
+            <label for="dt-edit_delete-menu_id">Select a location from the list to edit: </label>
+            <br>
+            <select id="dt-edit_delete-menu_id" name="menu" onchange="top.location.href=this.options[this.selectedIndex].value;">
+                <option value=""></option>
+                {% for location in locations %}
+                    <option value="{% url 'DanishTourism_Edit' location.pk %}">{{ location.name }}</option>
+                {% endfor %}
+            </select>
+            <div class="formBtn_container">
+                <a href="{% url 'DanishTourism_AddLocation' %}"><button type="button" class="dt-edit-CreateNewbtn dt-edit-btn">Add a New Location</button></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

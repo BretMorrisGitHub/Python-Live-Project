@@ -1,0 +1,22 @@
+{% extends "lis_base.html" %}
+{% load static %}
+{% block title %} ScraperAPI {% endblock %}
+{% block content %}
+
+<h1>This is the stuff that came back from the api: </h1>
+<h2>People:</h2>
+<p></p>
+<p>{{first_names.first_name0}} {{last_names.last_name0}}</p>
+<p>{{first_names.first_name1}}</p>
+<p>{{first_names.first_name2}}</p>
+<p>{{first_names.first_name3}}</p>
+<p>{{first_names.first_name4}}</p>
+<p>{{first_names.first_name5}}</p>
+<p>{{first_names.first_name6}}</p>
+<p>{{first_names.first_name7}}</p>
+
+{{ first_names }}
+
+
+{% endblock %}
+

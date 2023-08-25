@@ -1,0 +1,14 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Plan Your Flight{% endblock %}
+
+{% block header %}Plan your flight today!{% endblock %}
+
+{% block content %}
+<form name="dt-flight_search-form" class="dt-flight_search-form" id="dt-flight_search-form" action="" method="GET">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button id="dt-planTrip-submit" type="submit" name="Search Flights">Search Flights</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Confirm Delete{% endblock %}
+
+{% block header %}Delete Confirmation: {% endblock %}
+
+{% block content %}
+
+
+    <form method="POST" action=".">
+        {% csrf_token %}
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you would like to delete "{{ item.name }}" from the database?</p>
+
+        {{ item.as_p }}
+
+        <input type="submit" value="Yes" class="dt-confirm_delete-delete_btn">
+        <a href="{% url 'DanishTourism_EditLocation' %}"><button class="dt-confirmDelete-cancel_btn" type="button">Cancel</button></a>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Locations{% endblock %}
+
+{% block header %}Check out all of the wonderful sites Denmark has to offer!{% endblock %}
+
+{% block content %}
+<table class="dt-locations-table">
+    <!-- Replace these with the Django-populated info -->
+    <tr id="dt-locations-headerRow">
+        <th>City</th>
+        <th>Location</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>View</th>
+    </tr>
+    {% for l in locations %}
+    <tr>
+        <td class="dt-locations-tdName"><a href="{% url 'DanishTourism_ViewDetails' l.pk %}">{{ l.name }}</a></td>
+        <td>{{ l.city }}</td>
+        <td>{{ l.type }}</td>
+        <td>{{ l.description }}</td>
+        <td>{{ l.image }}</td>
+    </tr>
+     {% endfor %}
+</table>
+{% endblock %}

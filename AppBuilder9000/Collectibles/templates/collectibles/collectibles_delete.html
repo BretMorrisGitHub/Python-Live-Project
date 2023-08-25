@@ -1,0 +1,13 @@
+{% extends 'collectibles_base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete card: "{{ item.name }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+<button type="submit"><a href="{% url 'collectibles_display' %}">Return</a></button>
+{% endblock %}

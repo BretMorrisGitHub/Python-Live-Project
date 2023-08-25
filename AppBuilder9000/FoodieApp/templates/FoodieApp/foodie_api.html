@@ -1,0 +1,20 @@
+{% extends "foodie_base.html" %}
+
+{% block title %} FoodieApp{% endblock %}
+
+{% block header %} Random Cocktail Generator{% endblock%}
+
+{% block content %}
+
+<h3>Need a cocktail to go with your favorite recipe? Refresh the page to generate a random cocktail recipe!</h3>
+<h2>{{ name }}</h2>
+<h3>Ingredients Needed:</h3>
+<p> {{ ingredient1 }}</p>
+<p> {{ ingredient2 }}</p>
+<p> {{ ingredient3 }}</p>
+<p> {{ ingredient4 }}</p>
+<h3>Instructions:</h3>
+<p> {{ instructions }}</p>
+
+
+{% endblock %}

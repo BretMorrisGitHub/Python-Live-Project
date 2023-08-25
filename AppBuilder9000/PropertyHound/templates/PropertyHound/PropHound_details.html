@@ -1,0 +1,50 @@
+{% extends "PropHound_base.html" %}
+
+{% block title %}{{ property.street_add }}{% endblock %}
+
+{% block content %}
+
+
+{# flex box to center details table on screen #}
+<div class="d-flex justify-content-center">
+    {# Container to center text and set table width #}
+    <div class="text-center w-50">
+        {# table container for property details #}
+        <table class="table table-bordered table-sm">
+            <tbody>
+                <tr>
+                    <th scope="row">Street Address:</th>
+                    <td>{{ property.street_add }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">City:</th>
+                    <td>{{ property.city }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Zip Code:</th>
+                    <td>{{ property.zip_code }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">List Price:</th>
+                    <td>{{ property.price_listed }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">List Date:</th>
+                    <td>{{ property.date_listed }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Loan Type:</th>
+                    <td>{{ property.loan_type }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="text-center">
+    <button><a href="{% url 'prophound_edit' property.id %}">Edit</a></button>
+    <button><a href="{% url 'prophound_delete' property.id %}">Delete</a></button>
+</div>
+
+
+{% endblock %}

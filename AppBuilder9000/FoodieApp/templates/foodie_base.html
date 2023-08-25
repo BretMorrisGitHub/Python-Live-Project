@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>{% block title %} Foodie App {% endblock %}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background-color:pink">
+        <div class="page-container">
+            {% include "navbar.html" %}
+            <header class="header-title">
+                <h1> {% block header %} {% endblock %}</h1>
+             </header>
+            {% block content %} {% endblock %}
+        </div>
+
+        {% include "foodie-footer.html" %}
+    </body>
+
+
+
+
+</html>

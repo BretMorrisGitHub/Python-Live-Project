@@ -1,0 +1,24 @@
+{% extends 'DanishTourism_base.html' %}
+
+{% block title %}Danish Tourism App - Available Tours{% endblock %}
+
+{% block header %}View Available Tours!{% endblock %}
+
+{% block content %}
+
+<div class="dt-tours-container">
+    <p>Tours are currently available from: </p>
+    <div id="dt-tours-display">
+        <p class="dt-tours-display_container">{{ tour1 }}</p>
+        <p class="dt-tours-display_container">{{ tour2 }}</p>
+        <p class="dt-tours-display_container">{{ tour3 }}</p>
+        <p class="dt-tours-display_container">{{ tour4 }}</p>
+        <p class="dt-tours-display_container">{{ tour5 }}</p>
+    </div>
+</div>
+<br>
+<div class="dt-tours-linkContainer">
+    <p class="dt-tours-courtesy">Tours courtesy of <a href="https://www.bookmundi.com/">Bookmundi.com</a></p>
+</div>
+
+{% endblock %}

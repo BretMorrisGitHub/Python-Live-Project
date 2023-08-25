@@ -1,0 +1,22 @@
+{% extends 'collectibles_base.html' %}
+{% block title %}Create{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h2>Create a New Collectible Card Item</h2>
+<div class="container">
+    <div class="card-container">
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.name|as_crispy_field }}
+        {{ form.category|as_crispy_field }}
+        {{ form.year|as_crispy_field }}
+        {{ form.set|as_crispy_field }}
+        {{ form.description|as_crispy_field }}
+
+
+        <button type="submit">Save</button>
+    </form>
+    </div>
+</div>
+{% endblock %}

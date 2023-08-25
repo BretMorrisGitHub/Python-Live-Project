@@ -1,0 +1,39 @@
+{% extends "PropHound_base.html" %}
+{% block title %}Current Listings{% endblock %}
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Zip Code</th>
+            <th scope="col">List Price</th>
+            <th scope="col">List Date</th>
+            <th scope="col">Loan Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in property %}
+        <tr>
+            {# Add url link for details page #}
+            <td><a href="{% url 'prophound_details' p.id %}">{{ p.street_add }}</a></td>
+            <td>{{ p.city }}</td>
+            <td>{{ p.zip_code }}</td>
+            <td>{{ p.price_listed }}</td>
+            <td>{{ p.date_listed }}</td>
+            <td>{{ p.loan_type }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="text-center">
+    <button><a href="{% url 'prophound_create' %}">Add Listing</a></button>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
